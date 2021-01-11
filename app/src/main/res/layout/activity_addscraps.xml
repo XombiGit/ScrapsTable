@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/food"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/titleLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Enter Descriptive Title:"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:background="@drawable/labelborder"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/titleEdit"
+        android:layout_width="348dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="7dp"
+        android:hint="Limit 20 characters"
+        android:textColorHint="@color/labelTextColor"
+        android:textSize="25dp"
+        android:fontFamily="casual"
+        android:textStyle="italic|bold"
+        android:background="@drawable/border"
+        android:textColor="@color/textColor"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleLabel"
+        android:maxLength="20"/>
+
+    <TextView
+        android:id="@+id/expireTimeLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="25dp"
+        android:textColor="#000000"
+        android:text="Enter Time till Expiration:"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:background="@drawable/labelborder"
+        app:layout_constraintTop_toBottomOf="@id/titleEdit"/>
+
+    <EditText
+        android:id="@+id/expireTimeEdit"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="7dp"
+        android:hint="Limit 2 digits"
+        android:textColorHint="@color/labelTextColor"
+        android:textSize="25dp"
+        android:fontFamily="casual"
+        android:textStyle="italic|bold"
+        android:background="@drawable/border"
+        android:textColor="@color/textColor"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/expireTimeLabel"
+        android:inputType="number"
+        android:maxLength="2"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blankborder"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toRightOf="@id/expireTimeEdit"
+        app:layout_constraintTop_toBottomOf="@id/expireTimeLabel">
+    <Spinner
+        android:id="@+id/expireSpinnerAdd"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/imageSelectAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="serif"
+        android:text="Select Image (Optional):"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:background="@drawable/labelborder"
+        app:layout_constraintTop_toBottomOf="@id/expireTimeEdit" />
+
+    <Button
+        android:id="@+id/findImageButton"
+        android:layout_width="160dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/buttonbackground"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:onClick="imageSelect"
+        android:text="Select Image"
+        android:textColor="@drawable/buttontextcolor"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@+id/imageSelectAdd"/>
+    
+    <ImageView
+        android:id="@+id/image"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:padding="2dp"
+        android:visibility="visible"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageSelectAdd"/>
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="160dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/buttonbackground"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="Add Scraps"
+        android:textColor="@drawable/buttontextcolor"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:onClick="addScraps"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image"/>
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="160dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/buttonbackground"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="Cancel"
+        android:textColor="@drawable/buttontextcolor"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:onClick="returnBack"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        app:layout_constraintLeft_toRightOf="@id/addButton"/>
+
+</android.support.constraint.ConstraintLayout>

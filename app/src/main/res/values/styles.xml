@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/textBackground</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18dp</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ScrapDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:background">@color/textBackground</item>
+        <item name="android:textColor">@color/labelTextColor</item>
+    </style>
+
+    <style name="ScrapAlert" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:background">@color/textBackground</item>
+        <item name="android:textColor">@color/labelTextColor</item>
+    </style>
+
+</resources>

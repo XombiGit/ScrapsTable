@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Scraps Table</string>
+
+    <string-array name="time_array">
+            <item>Hours</item>
+            <item>Days</item>
+    </string-array>
+
+    <string-array name="category">
+        <item>Meal</item>
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Dessert</item>
+        <item>Burger</item>
+        <item>Chicken</item>
+        <item>Dairy</item>
+        <item>Fish</item>
+        <item>Fruit</item>
+        <item>Pasta</item>
+        <item>Pastry</item>
+        <item>Pizza</item>
+        <item>Sandwich</item>
+        <item>Vegetable</item>
+    </string-array>
+</resources>
